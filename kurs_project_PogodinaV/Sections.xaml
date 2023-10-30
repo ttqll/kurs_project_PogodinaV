@@ -1,0 +1,63 @@
+﻿<Page x:Class="kurs_project_PogodinaV.Sections"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kurs_project_PogodinaV"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Sections">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="112*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button 
+            x:Name="AlgebraThemesBtn" 
+            Grid.Row="0" 
+            Content="Алгебра"
+            Click="AlgebraThemesBtn_Click"/>
+        <Button 
+            x:Name="GeometryThemesBtn"
+            Grid.Column="0" 
+            Content="Геометрия" 
+            Grid.ColumnSpan="2"
+            Click="GeometryThemesBtn_Click" 
+            Grid.Row="1"/>
+        <Button 
+            x:Name="CombinatoricsThemesBtn"
+            Grid.Column="0" 
+            Grid.Row="2" 
+            Content="Комбинаторика"
+            Click="CombinatoricsThemesBtn_Click" Margin="0,0,0,112" Grid.RowSpan="2"/>
+        <Button 
+            x:Name="StatisticsThemesBtn"
+            Grid.ColumnSpan="2" 
+            Grid.Row="3" 
+            Content="Статистика" 
+            Click="StatisticsThemesBtn_Click"/>
+        <Button 
+            x:Name="MathAnalyzisThemesBtn"
+            Grid.Column="1" 
+            Grid.Row="0" 
+            Content="Начала мат.анализа"
+            Click="MathAnalyzisThemesBtn_Click"/>
+
+        <Button 
+            x:Name="ProbabilityTheoryThemesBtn"
+            Grid.Column="1"
+            Grid.Row="2"
+            Content="Теория вероятности"
+            Click="ProbabilityTheoryThemesBtn_Click" Margin="0,0,0,112" Grid.RowSpan="2"/>
+
+        <Frame x:Name="ThemesFrame" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+    </Grid>
+</Page>

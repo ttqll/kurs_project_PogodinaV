@@ -1,0 +1,44 @@
+﻿<Page x:Class="kurs_project_PogodinaV.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kurs_project_PogodinaV"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Settings">
+
+    <Grid x:Name="SettingsGrid" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Настройка учетной записи" Grid.Row="0">
+            <StackPanel>
+                <Separator Width="0" Height="10"/>
+                <Button x:Name="ChangeNickNameBtn" Content="Сменить никнейм" Width="500"/>
+                <Separator Width="0" Height="5"/>
+                <Button x:Name="ChangeNameBtn" Content="Сменить имя пользователя" Width="500"/>
+                <Separator Width="0" Height="5"/>
+                <Button x:Name="ChangePhotoBtn" Content="Сменить фото пользователя" Width="500"/>
+                <Separator Width="0" Height="5"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="ChangePasswordBtn" Content="Сменить пароль" Width="245"/>
+                    <Separator Width="5" Height="0"/>
+                    <Button x:Name="RemindPasswordBtn" Content="Воссстановить пароль" Width="250"/>
+                </StackPanel>
+                <Separator Width="0" Height="5"/>
+                <Button x:Name="ResetProgressBtn" Content="Обнулить результаты курса" Width="500"/>
+                <Separator Width="5" Height="0"/>
+                <Button x:Name="DeleteAccountBtn" Content="Удалить аккаунт" Width="500"/>
+                
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Настройка внешнего вида окна" Grid.Row="1">
+            <StackPanel>
+               
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</Page>

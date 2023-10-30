@@ -1,0 +1,55 @@
+﻿<Window x:Class="kurs_project_PogodinaV.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs_project_PogodinaV"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="73*"/>
+        </Grid.RowDefinitions>
+        <Label 
+            Content="Регистрация" 
+            Grid.Row="0" 
+            FontSize="26"/>
+        <TextBox 
+            x:Name="NameTxt" 
+            Text="Ваше имя" 
+            Grid.Row="1" 
+            Height="50" 
+            Width="250" Margin="150,9,150,9" />
+        <TextBox
+            x:Name="NickNameTxt"
+            Text="Ваш никнейм"
+            Grid.Row="2"
+            Height="50" 
+            Width="250" Margin="150,9,150,9"/>
+        <PasswordBox
+            x:Name="PasswordFirst"
+            Grid.Row="3"
+            Password="YourPass"
+            PasswordChar="*"
+            Height="50" 
+            Width="250" Margin="150,9,150,9"/>
+        <PasswordBox
+            x:Name="PasswordSecond"
+            Grid.Row="4"
+            Password="PassAgain"
+            PasswordChar="*"
+            Height="50" 
+            Width="250"/>
+        <Button
+            x:Name="RegistrationBtn"
+            Content="Регистрация"
+            Grid.Row="5"
+            Height="50"
+            Width="250"/>
+    </Grid>
+</Window>

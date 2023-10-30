@@ -1,0 +1,88 @@
+﻿<Page x:Class="kurs_project_PogodinaV.UserAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kurs_project_PogodinaV"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserAccount">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="214*"/>
+            <ColumnDefinition Width="329*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="121*"/>
+        </Grid.RowDefinitions>
+        <Image 
+            x:Name="UserPhoto" 
+            Source="C:\repos\kurs_project_PogodinaV\kurs_project_PogodinaV\Resources\Images\noPhoto.jpg" 
+            HorizontalAlignment="Center" 
+            Grid.RowSpan="3" 
+            Width="194"/>
+        <Label x:Name="UserName" 
+               FontSize="65" Content="Имя" 
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Height="85"
+               Width="138"
+               Grid.Column="1"/>
+        <Label x:Name="NickName"
+               FontSize="36"
+               Content="никнейм" 
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Height="74"
+               Width="160"
+               Grid.Row="1"
+               Grid.Column="1"/>
+        <GroupBox x:Name="UserProgress" Margin="0,0,0,19"  Header="Мой прогресс" FontSize="20" Grid.Row="2" Grid.Column="1" Grid.RowSpan="3">
+            <Grid>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="MostCommonMistakes" Header="Частые ошибки" FontSize="20"  Grid.Row="2" Grid.Column="2" Grid.RowSpan="2">
+            <Grid>
+                <Button 
+                    x:Name="MistakesTestBtn"
+                    FontSize="18"
+                    Content="Открыть тест"
+                    ToolTip="Тест по наиболее частым ошибкам"
+                    Height="65"
+                    VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
+        <Button
+            x:Name="CurrentTheme"
+            Content="Текущая тема"
+            FontSize="18"
+            Grid.Row="4" Grid.Column="2" 
+            Margin="5,20"/>
+
+        <StackPanel x:Name="AcccountButtons" Margin="5" Grid.Row="3" Grid.RowSpan="2">
+            <Button
+                x:Name="ExitAccount"
+                Content="Выйти"
+                FontSize="20" 
+                Height="35"
+                VerticalAlignment="Top"/>
+            
+            <Separator  Height="1" Width="0"/>
+
+            <Button
+                x:Name="ChangeAccount"
+                Content="Сменить пользователя"
+                FontSize="18" 
+                Height="45"
+                VerticalAlignment="Top"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

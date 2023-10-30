@@ -1,0 +1,136 @@
+﻿<Window x:Class="kurs_project_PogodinaV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs_project_PogodinaV"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="165*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button 
+               x:Name="MenuBtn" 
+               Click="MenuBtn_Click" 
+               Grid.Column="0" 
+               FontSize="18" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Content="menu" 
+               Height="70" 
+               Width="70"/>
+
+        <Grid x:Name="MenuGrid" Grid.Column="0" Background="LightGray" Visibility="Hidden">
+            <ListView Background="LightGray">
+                <ListBoxItem>
+                    <Button 
+                        Content="Личный кабинет" 
+                        FontSize="26" 
+                        Width="200" 
+                        Click="AccountBtn_Click"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button 
+                        x:Name="ThemesBtn"
+                        Content="Темы" 
+                        FontSize="26" 
+                        Width="200"
+                        Click="ThemesBtn_Click"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button 
+                        Content="Практика" 
+                        FontSize="26" 
+                        Width="200"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button 
+                        x:Name="SettingsBtn" 
+                        Content="Настройки"
+                        FontSize="26" 
+                        Width="200" 
+                        Click="SettingsBtn_Click"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button 
+                        Content="Подсказки" 
+                        FontSize="26" 
+                        Width="200"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <Button 
+                        x:Name="AbountProgram" 
+                        Content="О программе" 
+                        FontSize="26" 
+                        Width="200" 
+                        Click="AbountProgram_Click"/>
+                </ListBoxItem>
+            </ListView>
+
+
+        </Grid>
+
+        <ScrollViewer Grid.Column="1" x:Name="Feed" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2" >
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Image 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Source="./Resources/Feed/meme1.jpg" 
+                        Height="250" Width="250" 
+                        Loaded="memPic_Loaded"/>
+                    <Separator Width="0" Height="5"/>
+                    <Image 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Source="./Resources/Feed/meme2.jpg" 
+                        Height="250" Width="250"
+                        Loaded="memPic_Loaded"/>
+                    <Separator Width="0" Height="5"/>
+                    <Image 
+                        Source="./Resources/Feed/meme3.jpg" 
+                        Height="250" 
+                        Width="250" 
+                        Loaded="memPic_Loaded"/>
+                </StackPanel>
+
+                <Separator Width="5" Height="0"/>
+                
+                <StackPanel Orientation="Vertical">
+                    <Image 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center" 
+                        Source="./Resources/Feed/meme2.jpg" 
+                        Height="250" Width="250" 
+                        x:Name="memPic" 
+                        Loaded="memPic_Loaded"/>
+                    <Separator Width="0" Height="5"/>
+                    <Image 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Source="./Resources/Feed/meme3.jpg" 
+                        Height="250" 
+                        Width="250" 
+                        Loaded="memPic_Loaded"/>
+                    <Separator Width="0" Height="5"/>
+                    <Image 
+                        Source="./Resources/Feed/meme1.jpg" 
+                        Height="250" 
+                        Width="250" 
+                        Loaded="memPic_Loaded"/>
+                </StackPanel>
+            </StackPanel>
+
+        </ScrollViewer>
+
+
+        <Frame x:Name="MainFrame" Grid.ColumnSpan="3">
+
+        </Frame>
+    </Grid>
+</Window>
